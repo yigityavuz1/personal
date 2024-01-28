@@ -1,0 +1,8 @@
+pydantic
+fastapi
+openai
+requests
+uvicorn
+python-dotenv
+motor[srv]
+litellm

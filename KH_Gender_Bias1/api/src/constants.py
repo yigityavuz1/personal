@@ -1,0 +1,5 @@
+SYSTEM_MESSAGE_PATH = "static/system_message.txt"
+FEW_SHOT_EXAMPLES_PATH = "static/few_shot_examples.json"
+PERSON_FEW_SHOT_EXAMPLES_PATH = "static/few_shot_examples_person.json"
+EXCEL_PATH = "data/Ayrımcı Dil Genel Sözlük_20231011_GC_v13_V2.xlsx"
+NAME_DATABASE_PATH = "data/name_gender_database.xlsx"

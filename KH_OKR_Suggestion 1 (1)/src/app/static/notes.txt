@@ -1,0 +1,54 @@
+- daha inspiring hale getirilmesi (few-shotlar işe yaramazsa promptu düzenleyelim)
+- objective improvement için zaman metriği olsa bile objective'de zaman olmamalı (chat için de geçerli)
+
+- hangi entity'nin eksik olduğu istek ile birlikte bize gelecek, eksik boyutu tamamla şeklinde bir prompt iyileştirmesi
+- kr -> boyutların açıklamasını istemiyoruz. eğer düzelmiyorsa postprocess gerekebilir (açıklamalar parantez içinde geliyorsa o kısımlar atılabilir)
+- düzeltileni "" arası ver denilebilir
+
+- objective chat: inspiring eklemesi buraya da konacak
+- hem objective hem kr'lar için çalışan-spesifik departman ve pozisyona artı vurgu yapılacak (managerlar için stratejik)
+    - direktör, manager, vs için daha stratejik (birimlerine etki edecek şekilde)
+    - kişinin unvanı liderlik belirtiyorsa şeklinde ekleme yapalım
+- adet kısıtı koyalım (1 objective başına 4 tane kr nice-to-have ve en fazla 5 olmalı)
+- format tutarsızlığı
+- okr dışı bir şey sorulduğunda "Ben bir OKR asistanıyım, ..." şeklinde fix bir cevap dönsün
+
+- diğer chatler için de yukarıdakiler geçerli
+- en güncel few-shotlar eklenecek
+- şimdilik temperature değiştirmeyelim
+
+
+-------- TEST RESULTS --------
+
+Improve Key Results
+1. Ölçülebilirlik vermedi
+2. Uyarıları mesajın girdiği dilde verebilir mi?
+
+Improve Objectives
+1. Objectivelerde Zaman Boyutu Gelmemeli – çok kritik değil
+2. İngilizce girdiye Türkçe döndü-İngilizce few-shotları ekleyelim
+
+OKR/KR Suggestion Virtual Assistant
+1. Sektör ve departmanı anlıyor, üzerine o sektördeki popular konuları getir deyince daha da iyi dönüyor - OK
+2. Direktör için sonuçlar vs. Uzman için sonuçlar – etki alanını braz değiştiriyor gibi üzerinde çalışmamız lazım
+3. İsimle hitap etmiyor
+4. KR cümleleri fazla benzer geliyor ve Objectiveler yeterince ilham verici değil
+5. Dil – OK, sorulan dilde dönüş yapıyor
+6. OKR hariç hiçbir konuda cevap vermesin, sadece uyarı versin
+
+Development KR Suggestion Virtual Assistant
+1. Dil – OK, sorulan dilde getiriyor
+2. Alakasız konular için hiç cevap vermeden uyarı ile geçiyor. Bunda kullandığımız yöntemi virtual asistana da uygulayabiliriz.
+3. Her zaman isim ile hitap etmiyor.
+
+Aligned OKR/KR Suggestion Virtual Assistant
+1. Dil – OK, sorulan dilde getiriyor
+2. Alakasız konular için hiç cevap vermeden uyarı ile geçiyor. Bunda kullandığımız yöntemi virtual asistana da uygulayabiliriz.
+3. Her zaman isim ile hitap etmiyor.
+
+Generic OKR Virtual Assistant
+1. Sektördeki hype konuları güzel döndü ama TOFAŞ diye cevap verdi
+2. Alakasız konular için hiç cevap vermeden uyarı ile geçiyor. Bunda kullandığımız yöntemi virtual asistana da uygulayabiliriz.
+3. Her zaman isim ile hitap etmiyor.
+
+

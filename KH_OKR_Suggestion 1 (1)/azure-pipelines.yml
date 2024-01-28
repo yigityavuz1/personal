@@ -1,0 +1,22 @@
+trigger:
+- dev
+
+pool:
+ name: KDIOTPool
+ demands: docker
+
+steps:
+- task: Docker@2
+  inputs:
+    containerRegistry: 'KocHolding_OKR_Suggestion_Container_Registry'
+    repository: 'okrsuggestion'
+    command: 'build'
+    Dockerfile: '**/src/Dockerfile'
+    tags: '$(Build.SourceVersion)'
+
+- task: Docker@2
+  inputs:
+    containerRegistry: 'KocHolding_OKR_Suggestion_Container_Registry'
+    repository: 'okrsuggestion'
+    command: 'push'
+    tags: '$(Build.SourceVersion)'

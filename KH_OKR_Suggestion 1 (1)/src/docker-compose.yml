@@ -1,0 +1,32 @@
+version: '3.8'
+
+services:
+  mongodb:
+    image: mongo
+    ports:
+      - 27017:27017
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: supersecret
+    command: mongod --bind_ip_all && sleep 5 && mongo okrSuggestion --eval "db.createCollection('chatHistory')"
+
+  redis-stack:
+    image: redis/redis-stack
+    ports:
+      - 6379:6379
+      - 8001:8001
+
+  fastapi_app:
+    build: .
+    image: okr_suggestion_app
+    ports:
+      - 3000:3000
+    volumes:
+      - ./:/app/
+      - ./logs:/app/logs
+    env_file:
+      - .env
+    depends_on:
+      - mongodb
+      - redis-stack
+    command: "/opt/venv/bin/uvicorn main:app --reload --host 0.0.0.0 --port 3000"

@@ -1,0 +1,82 @@
+[
+  {
+    "role": "user",
+    "content": "Müşteri memnuniyet oranı (4/5)"
+  },
+  {
+    "role": "assistant",
+    "content": "Yıl sonuna kadar dijital kanallardaki müşteri memnuniyet oranın 4/5 olarak gerçekleşmesi"
+  },
+  {
+    "role": "user",
+    "content": "2 patent applications"
+  },
+  {
+    "role": "assistant",
+    "content": "Apply for two patents by the end of this year."
+  },
+  {
+    "role": "user",
+    "content": "Müşteri şikayetlerine geri dönüş süresinin maksimum 7 gün olması"
+  },
+  {
+    "role": "assistant",
+    "content": "Yıl sonu itibarıyla müşteri şikayetlerine geri dönüş süresinin maksimum 7 gün olması."
+  },
+  {
+    "role": "user",
+    "content": "Making At Least 1 Application to the Ministry of Industry and Technology Hamle Program"
+  },
+  {
+    "role": "assistant",
+    "content": "Making At Least 1 Application to the Ministry of Industry and Technology Hamle Program by the end of this year."
+  },
+  {
+    "role": "user",
+    "content": "Making 15 Horizon Europe Proposal Applications"
+  },
+  {
+    "role": "assistant",
+    "content": "Making 15 Horizon Europe Proposal Applications (Q2)"
+  },
+  {
+    "role": "user",
+    "content": "Q1 içerisinde fabrika üretim hattı revizyonlarının tamamlanması."
+  },
+  {
+    "role": "assistant",
+    "content": "Q1 içerisinde fabrika üretim hattı revizyonlarının en az %50’sinin tamamlanması."
+  },
+  {
+    "role": "user",
+    "content": "İlk çeyrek itibarıyla depolama maliyeti bütçesine uyum sağlanması."
+  },
+  {
+    "role": "assistant",
+    "content": "İlk çeyrek itibarıyla depolama maliyeti bütçesine %100 uyum sağlanması."
+  },
+  {
+    "role": "user",
+    "content": "Reduce exchange ratio due lack of spare parts by the end of Q2 for Poland and UK."
+  },
+  {
+    "role": "assistant",
+    "content": "Reduce % 10 exchange ratio due lack of spare parts by the end of Q2 for Poland and UK"
+  },
+  {
+    "role": "user",
+    "content": "Increase cash grants - Q4"
+  },
+  {
+    "role": "assistant",
+    "content": "Increase cash grants by 25% from the previous year"
+  },
+    {
+    "role": "user",
+    "content": "Nakliyeden 250000 TL tasarruf sağlanması."
+  },
+  {
+    "role": "assistant",
+    "content": "Nakliyeden 250.000 TL tasarruf sağlanması. (Q3 2024)"
+  }
+]

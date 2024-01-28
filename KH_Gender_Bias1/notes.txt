@@ -1,0 +1,64 @@
+1. check_bias:
+- concurrency:
+1. endpointe istek gelince asenkron bir workflow olacak (check_bias workflow)
+bu methodla llm'e kadar senkron (değişiklik yok) llm'de tek bir kullanıcı için:
+
+responses = []
+token_count = 0
+start = time.time()
+for sent in sentences:
+    token_count += count_token(sent)
+    resp = generate_response(args)
+    responses.append(resp)
+    if token_count > TOKEN_LIMIT: # ya da token sayısı check edilebilir
+        while True:
+            now = time.time()
+            if now-start > 60:
+                break
+            else:
+                await asyncio.sleep(1)
+
+await asyncio.gather(*responses) # bütün responselar dönene kadar bekliyor
+concat_responses = concat_sentences(responses)
+return concat_responses
+
+- to-do: multiple kullanıcı için
+- fastapi 30 saniye sonra time-out düşüyor, başka api türleri yapalım? (rest olmayacak)
+
+def check_if_used_as_job_terminology(sentence, chunk, keyword):
+    input_text = (
+        """In this sentence: "{sentence}", in part: "{chunk}", is the word "{keyword}" used as a job or business terminology which is not used to qualify a person or group of people?"""
+        .format(sentence=sentence, chunk=chunk, keyword=keyword))
+    print(input_text)
+    response = openai.ChatCompletion.create(
+        engine="gpt-4",
+        messages=[{"role": "system",
+                   "content": """"You will check if some words belong to a business/job jargon.
+                              "They can be a job title, a job description, etc. Answer either with 'Yes' or 'No'.
+                              Reply 'No' if a term is used for a person."""},
+                  {"role": "user",
+                   "content": input_text}],
+        temperature=0,
+        max_tokens=100,
+        top_p=0.95,
+        frequency_penalty=0,
+        presence_penalty=0,
+        stop=None)
+
+    # print(response)
+    return response['choices'][0]['message']['content']
+
+
+Person flag için:
+"Askerlik" ile alakalı bir few-shot eklenecek.
+"Seyahat engeli" ile ilgili few-shot eklenecek.
+"actively" ve "sharing" için insan davranışını niteleyen birer örnek verilecek.
+"esnek çalışma saatleri" ve "yoğun iş temposu" her halukarda ayrımcı olarak dönecek.
+içinde "engel" geçen bir şey olmaması gerekir.
+
+Job terminology için:
+"Mavi yaka" ve "beyaz yaka" few-shot eklenecek.
+
+CMD ["/opt/venv/bin/uvicorn", "app:app", "--host", "0.0.0.0","--port", "5000"]
+5000 i 80 olarak değiştir
+

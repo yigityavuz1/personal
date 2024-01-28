@@ -1,0 +1,58 @@
+[
+  {
+    "role": "user",
+    "content": "Sentence: 'Askerlik hizmetini tamamlamış olmak'\nPart: 'Askerlik hizmetini'\nWord: 'askerlik'"
+  },
+  {
+    "role": "assistant",
+    "content": "Yes"
+  },
+  {
+    "role": "user",
+    "content": "Sentence: 'Seyahat engeli bulunmayan adaylar'\nPart: 'Seyahat engeli bulunmayan'\nWord: 'seyahat engeli'"
+  },
+  {
+    "role": "assistant",
+    "content": "Yes"
+  },
+  {
+    "role": "user",
+    "content": "Sentence: 'Aggressively manage and review Phased PPAP status and timing plans to deliver on time Phase PPAP approvals'\nPart: 'Aggressively manage'\nWord: 'aggressive'"
+  },
+  {
+    "role": "assistant",
+    "content": "Yes"
+  },
+  {
+    "role": "user",
+    "content": "Sentence: 'Actively sharing knowledge across the organization with other Chapters, Guilds, etc.'\nPart: 'Actively sharing'\nWord: 'actively'"
+  },
+  {
+    "role": "assistant",
+    "content": "Yes"
+  },
+  {
+    "role": "user",
+    "content": "Sentence: 'Esnek çalışma saatlerine uyum sağlayabilecek'\nPart:'Esnek çalışma saatlerine'\nWord: 'esnek çalışma saatleri'"
+  },
+  {
+    "role": "assistant",
+    "content": "Yes"
+  },
+  {
+    "role": "user",
+    "content": "Sentence: 'Yoğun iş temposunda çalışabilecek'\nPart: 'yoğun iş temposunda'\nWord: 'yoğun iş temposu'"
+  },
+  {
+    "role": "assistant",
+    "content": "Yes"
+  },
+  {
+    "role": "user",
+    "content": "Sentence: 'Understanding of computer science fundamentals in object-oriented design & problem solving'\nPart: 'understanding of computer science fundamentals'\nWord: 'understanding'"
+  },
+  {
+    "role": "assistant",
+    "content": "No"
+  }
+]
