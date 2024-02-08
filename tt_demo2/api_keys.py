@@ -1,0 +1,5 @@
+OPENAI_AZURE_KEY_GPT3 = "5364d6db77da4a81809a74be59ed1a0e"
+OPENAI_AZURE_KEY_GPT4 = "53012879d8f943a0b19d6fddd9029492"
+OPENAI_GPT3_API_BASE = "https://openainlppg.openai.azure.com/"
+OPENAI_GPT4_API_BASE = "https://koc-openai-2.openai.azure.com/"
+OPENAI_API_KEY = "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"
