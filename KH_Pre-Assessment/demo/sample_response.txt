@@ -1,0 +1,94 @@
+response = {
+            "Content": [
+                {
+                    "Number": "1",
+                    "Subject": "SQL",
+                    "Type": "Multiple Choice",
+                    "Difficulty": "Easy",
+                    "Duration": "2 minutes",
+                    "Text": "Which SQL keyword is used to filter the results of a query based on a specific condition?\n    a) WHERE\n    b) SELECT\n    c) FILTER\n    d) LIMIT\n\n",
+                    "Answer": "a) WHERE\n"
+                },
+                {
+                    "Number": "2",
+                    "Subject": "Python",
+                    "Type": "True or False",
+                    "Difficulty": "Easy",
+                    "Duration": "1 minute",
+                    "Text": "In Python, a list is an ordered, mutable collection of elements.\n    a) True\n    b) False\n\n",
+                    "Answer": "a) True\n"
+                },
+                {
+                    "Number": "3",
+                    "Subject": "SQL",
+                    "Type": "Open Ended",
+                    "Difficulty": "Easy",
+                    "Duration": "3 minutes",
+                    "Text": "Write a SQL query that selects all columns from the \"employees\" table where the \"salary\" column is greater than 50000.\n\n",
+                    "Answer": "SELECT * FROM employees WHERE salary > 50000;\n"
+                },
+                {
+                    "Number": "4",
+                    "Subject": "Python",
+                    "Type": "Multiple Choice",
+                    "Difficulty": "Easy",
+                    "Duration": "2 minutes",
+                    "Text": "Which function is used to get user input in Python?\n    a) input()\n    b) prompt()\n    c) get()\n    d) read()\n\n",
+                    "Answer": "a) input()\n"
+                },
+                {
+                    "Number": "5",
+                    "Subject": "SQL",
+                    "Type": "Multiple Choice",
+                    "Difficulty": "Normal",
+                    "Duration": "3 minutes",
+                    "Text": "Which SQL clause is used to join two or more tables based on a related column between them?\n    a) JOIN\n    b) CONCATENATE\n    c) MERGE\n    d) UNION\n\n",
+                    "Answer": "a) JOIN\n"
+                },
+                {
+                    "Number": "6",
+                    "Subject": "Python",
+                    "Type": "Open Ended",
+                    "Difficulty": "Normal",
+                    "Duration": "4 minutes",
+                    "Text": "Write a Python function that calculates the factorial of a given number.\n\n",
+                    "Answer": "  def factorial(n):\n      if n == 0 or n == 1:\n          return 1\n      else:\n          return n * factorial(n"
+                },
+                {
+                    "Number": "7",
+                    "Subject": "SQL",
+                    "Type": "True or False",
+                    "Difficulty": "Normal",
+                    "Duration": "2 minutes",
+                    "Text": "The HAVING clause is used in combination with the GROUP BY clause to filter the results of an aggregate function.\n    a) True\n    b) False\n\n",
+                    "Answer": "a) True\n"
+                },
+                {
+                    "Number": "8",
+                    "Subject": "Python",
+                    "Type": "Open Ended",
+                    "Difficulty": "Normal",
+                    "Duration": "5 minutes",
+                    "Text": "Write a Python function that takes a list of numbers as input and returns a list of unique numbers in the input list.\n\n",
+                    "Answer": "  def unique_numbers(input_list):\n      return list(set(input_list))\n"
+                },
+                {
+                    "Number": "9",
+                    "Subject": "SQL",
+                    "Type": "Open Ended",
+                    "Difficulty": "Hard",
+                    "Duration": "6 minutes",
+                    "Text": "Write a SQL query that retrieves the top 5 highest paid employees along with their department names from the \"employees\" and \"departments\" tables. Assume the \"employees\" table has columns \"id\", \"first_name\", \"last_name\", \"salary\", and \"department_id\", and the \"departments\" table has columns \"id\" and \"name\".\n\n",
+                    "Answer": "\n  SELECT TOP 5 e.first_name, e.last_name, d.name as department_name\n  FROM employees e\n  INNER JOIN departments d ON e.department_id = d.id\n  ORDER BY e.salary DESC;\n"
+                },
+                {
+                    "Number": "10",
+                    "Subject": "Python",
+                    "Type": "Open Ended",
+                    "Difficulty": "Hard",
+                    "Duration": "10 minutes",
+                    "Text": "Write a Python script that reads a CSV file and outputs the average value of a specified column. Assume the CSV file has a header row.\n\n",
+                    "Answer": "  import csv\n\n  def average_value(filename, column_name):\n      total = 0\n      count = 0\n      with open(filename, \"r\") as csvfile:\n          reader = csv.DictReader(csvfile)\n          for row in reader:\n              total += float(row[column_name])\n              count += 1\n      return total / count"
+                }
+            ]
+        }

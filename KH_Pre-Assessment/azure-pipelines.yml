@@ -1,0 +1,57 @@
+trigger:
+ branches:
+  include:
+    - master
+    - dev
+    - test
+ paths:
+   exclude:
+   - demo/*
+
+
+pool:
+ name: KDIOTPool
+ demands: docker
+
+
+steps:
+- task: Docker@2
+  condition: eq(variables['Build.SourceBranch'], 'refs/heads/dev')
+  inputs:
+    containerRegistry: 'KocHolding_PreAssesment_Container_Registry'
+    repository: 'preassessment'
+    command: 'build'
+    Dockerfile: '**/Dockerfile'
+    tags: '$(Build.SourceVersion)'
+
+- task: Docker@2
+  condition: eq(variables['Build.SourceBranch'], 'refs/heads/dev')
+  inputs:
+    containerRegistry: 'KocHolding_PreAssesment_Container_Registry'
+    repository: 'preassessment'
+    command: 'push'
+    tags: '$(Build.SourceVersion)'
+    
+- task: Docker@2
+  condition: eq(variables['Build.SourceBranch'], 'refs/heads/test')
+  inputs:
+    containerRegistry: 'KocDigital_KH_PreAssessment_Container_Registry'
+    repository: 'preassessment'
+    command: 'build'
+    Dockerfile: '**/Dockerfile'
+    tags: 'latest'
+
+- task: Docker@2
+  condition: eq(variables['Build.SourceBranch'], 'refs/heads/test')
+  inputs:
+    containerRegistry: 'KocDigital_KH_PreAssessment_Container_Registry'
+    repository: 'preassessment'
+    command: 'push'
+    tags: 'latest'
+
+- task: AzureCLI@2
+  inputs:
+    azureSubscription: 'KD_Azure_Test_Subscription_Connection'
+    scriptType: 'bash'
+    scriptLocation: 'inlineScript'
+    inlineScript: 'az container restart --name ci-preassessment-fastapi --resource-group rg-kocholding-preassessment'

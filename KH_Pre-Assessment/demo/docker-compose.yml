@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  pre-assessment-fastapi:
+    build: ..
+    image: pre-assessment-fastapi
+    ports:
+      - 3000:3000
+    command: "/opt/venv/bin/uvicorn app:app --reload --host 0.0.0.0 --port 3000"
+  pre-assessment-streamlit:
+    build: .
+    image: pre-assessment-streamlit
+    ports:
+      - 8501:8501
+    volumes:
+      - ./:/app/
+    command: "/opt/venv/bin/streamlit run demo.py --server.port=8501 --server.address=0.0.0.0"
