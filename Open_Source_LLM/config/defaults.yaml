@@ -1,0 +1,6 @@
+Environment:
+  HF_HOME: '/bigfastdisk/hugginface_cache'
+  TORCH_HOME: '/bigfastdisk/torch_cache'
+  CUDA_VISIBLE_DEVICES: '1'
+Logging:
+  TransformersLogLevel: 'INFO'
