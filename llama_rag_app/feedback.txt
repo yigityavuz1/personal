@@ -1,0 +1,23 @@
+Feedback:güzel
+Feedback:güzel
+Feedback:güzel
+Feedback:güzel
+Tokens Used: 0
+	Prompt Tokens: 0
+	Completion Tokens: 0
+Successful Requests: 0
+Total Cost (USD): $0.0
+Query_Text:danone waters kampanyasında müşterilerin, puanlarını Opet istasyonlarında harcamaları için ne yapmaları gerekir?
+Response:Kampanya koşullarına göre, Danone Waters kampanyasında müşterilerin puanlarını Opet istasyonlarında harcamaları için, ödeme sırasında cep telefonu numaralarını ve cep telefonlarına gelen puan harcama şifrelerini OPET istasyonlarındaki market görevlisine iletmeleri gerekir. Bu sayede, müşteriler puanlarını Opet istasyonlarında harcayarak, 200 TL değerinde Opet Yakıt Puan kazanacaklardır.
+##
+
+Feedback:güzel
+Tokens Used: 0
+	Prompt Tokens: 0
+	Completion Tokens: 0
+Successful Requests: 0
+Total Cost (USD): $0.0
+Query_Text:danone waters kampanyasında müşterilerin, puanlarını Opet istasyonlarında harcamaları için ne yapmaları gerekir?
+Response:Kampanya koşullarına göre, Danone Waters kampanyasında müşterilerin puanlarını Opet istasyonlarında harcamaları için, ödeme sırasında cep telefonu numaralarını ve cep telefonlarına gelen puan harcama şifrelerini OPET istasyonlarındaki market görevlisine iletmeleri gerekir. Bu sayede, müşteriler puanlarını Opet istasyonlarında harcayarak, 200 TL değerinde Opet Yakıt Puan kazanacaklardır.
+##
+
