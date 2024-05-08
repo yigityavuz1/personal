@@ -1,0 +1,19 @@
+version: '3.8'  
+
+services:
+  streamlit-app: 
+    build:
+      context: .
+      dockerfile: Dockerfile 
+    ports:
+      - "8501:8501"  
+    volumes:
+      - .:/app  
+    environment:
+      - AZURE_OPENAI_API_KEY = "5364d6db77da4a81809a74be59ed1a0e"
+        AZURE_OPENAI_ENDPOINT = "https://openainlppg.openai.azure.com/"
+
+        AWS_ACCESS_KEY_ID = "AKIA4TM3CYDLERB2VO5F"
+        AWS_SECRET_ACCESS_KEY = "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"
+        AWS_DEFAULT_REGION = "us-east-1"
+
