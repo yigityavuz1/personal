@@ -1,32 +1,22 @@
 from api_keys import OPENAI_AZURE_KEY, OPENAI_API_BASE, AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY, AWS_DEFAULT_REGION
 from langchain.vectorstores import FAISS
-from langchain.embeddings.openai import OpenAIEmbeddings
-from langchain.chains.question_answering import load_qa_chain
 from langchain.callbacks import get_openai_callback
-from langchain_community.callbacks.streamlit.streamlit_callback_handler import StreamlitCallbackHandler
-from langchain.chat_models import ChatOpenAI, AzureChatOpenAI
 import streamlit as st
-from PIL import Image
-from langchain.document_loaders import PyPDFLoader
-from langchain.memory import ConversationBufferMemory
-from langchain.chains import RetrievalQA
-from langchain.chains import ConversationalRetrievalChain
 from langchain_community.llms import Bedrock
 from langchain_openai import AzureOpenAIEmbeddings
-import pandas as pd
-from langchain_community.llms import HuggingFaceEndpoint
 import os
 
 os.environ['AWS_ACCESS_KEY_ID'] = AWS_ACCESS_KEY_ID
 os.environ['AWS_SECRET_ACCESS_KEY'] = AWS_SECRET_ACCESS_KEY
 os.environ['AWS_DEFAULT_REGION'] = AWS_DEFAULT_REGION
 
+os.environ['AZURE_OPENAI_ENDPOINT'] = OPENAI_API_BASE
+os.environ['AZURE_OPENAI_API_KEY'] = OPENAI_AZURE_KEY
+
 embeddings = AzureOpenAIEmbeddings(
                 deployment="embeddings",
                 model="text-embedding-ada-002",
-                azure_endpoint=OPENAI_API_BASE,
                 openai_api_type="azure",
-                openai_api_key=OPENAI_AZURE_KEY,
                 chunk_size=1)
 
 llm = Bedrock(
