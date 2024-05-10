@@ -1,0 +1,8 @@
+openai_endpoints:
+  model_name: "gpt-4"
+  model: "azure/gpt4turbo-okrsuggestion-hrsub5"
+  api_key: "8fbe6a8ea63f4dbdb494e92b559e322b"
+  api_base: "https://openai-okrsuggestion-hrsub5.openai.azure.com/"
+  api_version: "2023-07-01-preview"
+  tpm: 80000
+  rpm: 60

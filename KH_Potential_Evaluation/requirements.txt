@@ -1,0 +1,6 @@
+fastapi
+logging
+openai
+pydantic
+PyYAML
+uvicorn
