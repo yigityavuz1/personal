@@ -1,0 +1,43 @@
+
+trigger:
+- master
+
+pool:
+ name: KDIOTPool
+ demands: docker
+
+steps:
+- task: Docker@2
+  inputs:
+   containerRegistry: 'Duzey_Container_Registry'
+   repository: 'voiceorderapi'
+   command: 'build'
+   Dockerfile: '**/Dockerfile'
+   tags: '$(Build.SourceVersion)'
+   addPipelineData: false
+   addBaseImageData: false
+
+- task: Docker@2
+  inputs:
+   containerRegistry: 'Duzey_Container_Registry'
+   repository: 'voiceorderapi'
+   command: 'push'
+   tags: '$(Build.SourceVersion)'
+   addPipelineData: false
+   addBaseImageData: false
+
+- task: AzureCLI@2
+  inputs:
+    azureSubscription: 'Duzey_Azure_Connection'
+    scriptType: 'bash'
+    scriptLocation: 'inlineScript'
+    inlineScript: 'az config set extension.use_dynamic_install=yes_without_prompt'
+    
+
+- task: AzureCLI@2
+  inputs:
+    azureSubscription: 'Duzey_Azure_Connection'
+    scriptType: 'bash'
+    scriptLocation: 'inlineScript'
+    inlineScript: 'az containerapp update -n capp-voice-order-api -g rg-voiceorder --image voiceorder.azurecr.io/voiceorderapi:$(Build.SourceVersion)'
+

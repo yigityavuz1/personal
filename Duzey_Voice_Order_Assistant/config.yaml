@@ -1,0 +1,29 @@
+openai_endpoints:
+  model_name: "gpt-35-turbo"
+  model: "azure/gpt35-canada"
+  api_key: "f702f663e199450a9c1be25e24d5b49a"
+  api_base: "https://voiceorder-openai.openai.azure.com/"
+  api_version: "2024-02-01"
+  deployment_name: "gpt35-canada"
+  tpm: 300000
+  rpm: 600
+
+ai_search_credentials:
+  api_key: "4sBN1ZJSy3WB2xgDAzqHDZ5VmsxaElPYr2XOpuXe6kAzSeACcSvo"
+  endpoint: "https://voiceorder-ai-search-new.search.windows.net"
+  index_name: "products"
+
+embedding_endpoints:
+  model_name: "text-embedding-3-large"
+  model: "azure/text-embedding-canada"
+  api_key: "f702f663e199450a9c1be25e24d5b49a"
+  api_base: https://voiceorder-openai.openai.azure.com/
+  deployment_name: "text-embedding-canada"
+
+stock_control:
+  authorization_url : "https://api.calmlo8d-kocholdin4-s1-public.model-t.cc.commerce.ondemand.com/occ/v2/authorizationserver/oauth/token"
+  url: "https://api.calmlo8d-kocholdin4-s1-public.model-t.cc.commerce.ondemand.com/occ/v2/"
+  user: "905386870561"
+  password: "12345"
+  client_id: "mobile_android"
+  client_secret: "secret"
