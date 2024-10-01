@@ -1,0 +1,4 @@
+AZURE_STORAGE_CONN_STR=DefaultEndpointsProtocol=https;AccountName=kocdigitalcorporategpt;AccountKey=HrrqPhOorKDlmvL7BSxExjtxUqC8rrI9V98UvmeqEztmmmS4/1l1Rdy1qeGFsZuSA/fGvDJi4DQG+AStRQnL3A==;EndpointSuffix=core.windows.net
+
+OPENAI_AZURE_KEY_GPT3=62caf644b0f143dd99dafcc5e5a8b5d4
+OPENAI_GPT3_API_BASE=https://northcentral-openai.openai.azure.com/
