@@ -1,0 +1,42 @@
+trigger:
+ branches:
+   include:
+     - master
+     - dev
+ paths:
+   include:
+     - backend
+
+pool:
+ name: KDIOTPool
+ demands: docker
+
+steps:
+- task: Docker@2
+  inputs:
+    containerRegistry: 'KD_CorporateAI_Sales_Assistant_Dev_Container_Registry'
+    repository: 'api'
+    command: 'build'
+    Dockerfile: '**/backend/Dockerfile'
+    tags: '$(Build.SourceVersion)'
+    addPipelineData: false
+    addBaseImageData: false
+ 
+- task: Docker@2
+  inputs:
+    containerRegistry: 'KD_CorporateAI_Sales_Assistant_Dev_Container_Registry'
+    repository: 'api'
+    command: 'push'
+    tags: '$(Build.SourceVersion)'
+    addPipelineData: false
+    addBaseImageData: false
+
+- script: echo $(Build.SourceVersion) > $(Build.ArtifactStagingDirectory)/sourceVersion.txt
+  displayName: 'Capture Source Version'
+
+- task: PublishBuildArtifacts@1
+  displayName: 'Publish Source Version as Build Artifact'
+  inputs:
+    pathtoPublish: '$(Build.ArtifactStagingDirectory)/sourceVersion.txt'
+    artifactName: 'source-version'
+    publishLocation: 'Container'

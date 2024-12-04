@@ -1,0 +1,22 @@
+encryptionsalt: v1:gfXBRD9jrpo=:v1:753f4zRRDVFDYxjo:4SH+vmLIpqIyi4YW6W6VcEgs8EUfIQ==
+config:
+  azure-native:location: NorthEurope
+  CorporateAI-Sales-Assistant:resource-group-name: RG-CorporateAI-Sales-Assistant-Dev
+  CorporateAI-Sales-Assistant:storage-account-name: corpaisalesassistantdev
+  CorporateAI-Sales-Assistant:openai-account-name: OpenAI-Sales-Assistant-Dev
+  CorporateAI-Sales-Assistant:openai-location: SwedenCentral
+  CorporateAI-Sales-Assistant:openai-domain-name: openai-sales-assistant-dev
+  CorporateAI-Sales-Assistant:vault-name: KV-Sales-Assistant-Dev
+  azure-native:tenantId: 6e1cd03a-54b7-4e49-9bd1-381cd8b93b2f
+  CorporateAI-Sales-Assistant:openai-text-embedding-name: Text-Embedding
+  CorporateAI-Sales-Assistant:openai-text-embedding-model: text-embedding-3-large
+  CorporateAI-Sales-Assistant:openai-text-embedding-version: "1"
+  CorporateAI-Sales-Assistant:openai-text-embedding-capacity: 120
+  CorporateAI-Sales-Assistant:openai-llm-name: LLM
+  CorporateAI-Sales-Assistant:openai-llm-model: gpt-4o
+  CorporateAI-Sales-Assistant:openai-llm-version: "2024-08-06"
+  CorporateAI-Sales-Assistant:openai-llm-capacity: 500
+  CorporateAI-Sales-Assistant:container-registry-resource-name: CR-Sales-Assistant-Dev
+  CorporateAI-Sales-Assistant:container-registry-name: kocdigitalsalesassistantdev
+  CorporateAI-Sales-Assistant:mongodb-resource-name: MongoDB-Sales-Assistant-Dev
+  CorporateAI-Sales-Assistant:mongodb-account-name: mongodb-sales-assistant-dev
